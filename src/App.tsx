@@ -8,6 +8,7 @@ import { Home } from '@/components/home';
 import { WalletConfig } from '@/modules/wallet/config/walletConfig';
 import './App.css'
 import FirstPlayer from './modules/players/components/firstPlayer';
+import SecondPlayer from './modules/players/components/secondPlayer';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Home/>
           <Routes>
             <Route path="/" element={<FirstPlayer />} />
+            <Route path="/secondPlayer" element={<SecondPlayer />}/>
           </Routes>
           <Toaster />
         </BrowserRouter>
