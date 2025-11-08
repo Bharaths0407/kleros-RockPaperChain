@@ -11,28 +11,32 @@ A decentralized Rock–Paper–Scissors game built on Ethereum Sepolia Testnet w
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Follow these steps to clone, install, and run the project locally:
 
  1. Clone the repository
+
     ```bash
     git clone https://github.com/Bharaths0407/kleros-RockPaperChain.git
     ```
 ---
 
   2. Navigate into the project
+
       ```bash
       cd kleros-RockPaperChain
       ```
 ---
 
   3. Install dependencies
+  
       ```bash
       npm install
       ```
 ---
   4. Start the development server
+  
       ```bash
       npm run dev
       ```
