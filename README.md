@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# RockPaperChain
+A decentralized Rock–Paper–Scissors game built on Ethereum Sepolia Testnet where players can stake ETH, challenge each other, and let the smart contract decide the winner.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Tech Stack
 
-Currently, two official plugins are available:
+| Layer | Technology |
+|-------|-------------|
+| Frontend | React.js, Vite |
+| Wallet Connection | MetaMask, Ethers.js |
+| Network | Ethereum Sepolia Testnet |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠️ Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Follow these steps to clone, install, and run the project locally:
 
-## Expanding the ESLint configuration
+ 1. Clone the repository
+    ```bash
+    git clone https://github.com/Bharaths0407/kleros-RockPaperChain.git
+    ```
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  2. Navigate into the project
+      ```bash
+      cd kleros-RockPaperChain
+      ```
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  3. Install dependencies
+      ```bash
+      npm install
+      ```
+---
+  4. Start the development server
+      ```bash
+      npm run dev
+      ```
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Usage Guide
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. Connect your wallet
+- Open the app and connect your **MetaMask** wallet  
+- Ensure you’re on the **Sepolia Testnet**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Start a new game
+- Choose your move (**Rock**, **Paper**,  **Scissors**, **Spock**, or **Lizard**)  
+- Enter a **stake amount** (in SepoliaETH)  
+- Your move is hashed and stored with a **salt** (Remember to Copy the Salt)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. Share the game link
+- Send the generated game link to your opponent
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 4. Opponent joins
+- The opponent selects their move and matches the stake
+
+### 5. Reveal phase
+- Player 1 reveals their move and salt  
+- The smart contract validates the move and determines the winner
+
+### 6. Automatic payout
+- The winner automatically receives the total pot in their wallet 
