@@ -162,7 +162,7 @@ export default function FirstPlayer() {
     };
 
     return (
-        <div className="bg-linear-to-br from-slate-50 to-slate-100 p-6 md:p-8">
+        <div className="bg-background p-6 md:p-8">
             <div className="max-w-xl mx-auto">
                 <div className="mb-8 text-center">
                     <h1 className="text-2xl font-bold text-slate-900 mb-2">

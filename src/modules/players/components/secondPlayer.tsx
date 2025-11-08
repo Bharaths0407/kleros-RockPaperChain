@@ -26,7 +26,7 @@ export default function SecondPlayer() {
 
     if (!contractAddress) {
         return (
-            <div className="bg-linear-to-br from-slate-50 to-slate-100 min-h-screen p-6 md:p-8">
+            <div className="bg-background min-h-screen p-6 md:p-8">
                 <div className="max-w-xl mx-auto">
                     <Alert className="border-red-200 bg-red-50">
                         <AlertCircle className="h-4 w-4 text-red-600" />
@@ -44,7 +44,7 @@ export default function SecondPlayer() {
 
     if (!isConnected) {
         return (
-            <div className="bg-linear-to-br from-slate-50 to-slate-100 min-h-screen p-6 md:p-8">
+            <div className="bg-background min-h-screen p-6 md:p-8">
                 <div className="max-w-xl mx-auto">
                     <Alert className="border-red-200 bg-red-50">
                         <AlertCircle className="h-4 w-4 text-red-600" />
@@ -62,7 +62,7 @@ export default function SecondPlayer() {
 
     if (!isAddress(contractAddress)) {
         return (
-            <div className="bg-linear-to-br from-slate-50 to-slate-100 min-h-screen p-6 md:p-8">
+            <div className="bg-background min-h-screen p-6 md:p-8">
                 <div className="max-w-xl mx-auto">
                     <Alert className="border-red-200 bg-red-50">
                         <AlertCircle className="h-4 w-4 text-red-600" />
@@ -117,7 +117,7 @@ function SecondMoveContent({
 
     if (stakeAmountFetchError || player2Error) {
         return (
-            <div className="bg-linear-to-br from-slate-50 to-slate-100 min-h-screen p-6 md:p-8">
+            <div className="bg-background min-h-screen p-6 md:p-8">
                 <div className="max-w-xl mx-auto">
                     <Alert className="border-red-200 bg-red-50">
                         <AlertCircle className="h-4 w-4 text-red-600" />
@@ -135,7 +135,7 @@ function SecondMoveContent({
 
     if (stakeAmountIsLoading || player2Loading) {
         return (
-            <div className="bg-linear-to-br from-slate-50 to-slate-100 min-h-screen p-6 md:p-8">
+            <div className="bg-background min-h-screen p-6 md:p-8">
                 <div className="max-w-xl mx-auto">
                     <Card className="border-slate-200 shadow-sm">
                         <CardContent className="pt-6">
@@ -152,7 +152,7 @@ function SecondMoveContent({
 
     if (currentAddress !== player2Data) {
         return (
-            <div className="bg-linear-to-br from-slate-50 to-slate-100 min-h-screen p-6 md:p-8">
+            <div className="bg-background min-h-screen p-6 md:p-8">
                 <div className="max-w-xl mx-auto">
                     <Alert className="border-blue-200 bg-blue-50">
                         <AlertCircle className="h-4 w-4 text-blue-600" />
@@ -169,7 +169,7 @@ function SecondMoveContent({
     }
 
     return (
-        <div className="bg-linear-to-br from-slate-50 to-slate-100 p-6 md:p-8 min-h-screen">
+        <div className="bg-background p-6 md:p-8 min-h-screen">
             <div className="max-w-xl mx-auto">
                 <div className="mb-8 text-center">
                     <h1 className="text-xl font-bold text-slate-900 mb-2">

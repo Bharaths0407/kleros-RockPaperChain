@@ -6,9 +6,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { Home } from '@/components/home';
 import { WalletConfig } from '@/modules/wallet/config/walletConfig';
-import './App.css'
+
 import FirstPlayer from './modules/players/components/firstPlayer';
 import SecondPlayer from './modules/players/components/secondPlayer';
+import GameOutcome from './modules/results/gameOutcome';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<FirstPlayer />} />
             <Route path="/secondPlayer" element={<SecondPlayer />}/>
+            <Route path="/gameOutcome" element={<GameOutcome />} />
           </Routes>
           <Toaster />
         </BrowserRouter>
